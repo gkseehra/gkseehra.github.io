@@ -1,0 +1,62 @@
+/*
+COLOR PALETTE
+https://coolors.co/080705-362023-700548-7272ab-7899d4
+#080705 - almost black
+#362023 - old burgundy -- brownish
+#700548 - pansy purple
+#7272AB - dark blue gray
+#7899D4 - cornflower blue
+#fff - white
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    background-image: url(https://picsum.photos/1500/1000?grayscale);
+    background-repeat: no-repeat;
+    background-size:     cover;
+    background-position: center center;      
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* overflow: auto; */
+    max-width: 30rem;
+    background-color: #080705;
+    opacity: 0.9;
+    padding: 1rem;
+    position: fixed;    
+}
+nav div {
+    border: 2px rgba(217, 209, 189, 0.5) solid;
+    height: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: #fff;  
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2.5rem;
+}
+nav a{
+    text-decoration: none;
+    font-size: 2rem;
+    color:#fff;
+    padding: 1rem;
+    border-bottom: 1px rgba(217, 209, 189, 0.5) solid;
+}
+
+nav a.selected {
+    background-color: #700548;
+  }
+nav a:hover:not(.active) {
+    background-color: #7272AB;
+  }
