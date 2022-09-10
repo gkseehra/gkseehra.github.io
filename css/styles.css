@@ -57,7 +57,7 @@ nav a {
   border-bottom: 1px rgba(217, 209, 189, 0.5) solid;
 }
 
-nav a.selected .nav-selected{
+nav a.selected {
   background-color: #700548;
 }
 nav a:hover:not(.active) {
