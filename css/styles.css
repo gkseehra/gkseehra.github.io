@@ -9,6 +9,7 @@ https://coolors.co/080705-362023-700548-7272ab-7899d4
 #fff - white
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
@@ -36,6 +37,7 @@ nav {
   padding: 1rem;
   /* position: fixed;     */
 }
+
 nav div {
   border: 2px rgba(217, 209, 189, 0.5) solid;
   height: 5rem;
@@ -49,6 +51,7 @@ nav div {
   text-align: center;
   font-size: 2.5rem;
 }
+
 nav a {
   text-decoration: none;
   font-size: 2rem;
@@ -60,15 +63,18 @@ nav a {
 nav a.selected {
   background-color: #700548;
 }
+
 nav a:hover:not(.active) {
   background-color: #7272ab;
 }
+
 .main {
   display: flex;
   flex-direction: row;
   height: 100%;
   overflow: hidden;
 }
+
 .content {
   background-color: #fff;
   flex: 1;
@@ -76,10 +82,12 @@ nav a:hover:not(.active) {
   overflow: scroll;
   padding: 3rem;
 }
+
 .content h1 {
   font-size: 2.7rem;
   text-align: center;
 }
+
 .content p {
   font-size: 1.6rem;
   text-align: justify;
@@ -93,6 +101,7 @@ div.work-exp-card {
   margin: auto;
   border-radius: 5px;
 }
+
 .work-exp-card:nth-child(n + 3) {
   margin-top: 8rem;
 }
@@ -109,6 +118,7 @@ div.about-company {
   width: 2rem;
   height: 2rem;
 }
+
 #claro-image {
   width: 4rem;
 }
@@ -156,6 +166,7 @@ div.about-company {
   font-weight: 600;
   text-align: center;
 }
+
 .project-type {
   font-weight: 100;
 }
@@ -165,6 +176,7 @@ div.about-company {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .skills-card {
   display: flex;
   max-width: 10rem;
@@ -226,6 +238,7 @@ with a fixed width and height */
   width: 728px;
   background-color: white;
 }
+
 .slide img {
   max-height: 460px;
   max-width: 728px;
@@ -236,6 +249,7 @@ with a fixed width and height */
   /* Calculate the total width on the
   basis of number of slides */
   width: calc(728px * 4);
+  height: 460px;
 
   /* Specify the animation with the
   duration and speed */
@@ -245,6 +259,7 @@ with a fixed width and height */
 /* Define the animation
 for the slideshow */
 @keyframes slide {
+
   /* Calculate the margin-left for
   each of the slides */
   20% {
