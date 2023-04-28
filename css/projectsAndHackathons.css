@@ -29,7 +29,7 @@ body {
 
 nav {
     display: flex;
-    max-width: 30rem;
+    width: 20%;
     height: 100%;
     background-color: #080705;
     opacity: 0.9;
@@ -287,11 +287,3 @@ for the slideshow */
 .project-wrapper {
     width: 25rem;
 }
-
-/* 
-TODO- Use valid images.
-TODO- Create different css & js files.
-TODO- Complete contact-me page.
-TODO- Add original content.
-TODO- Complete projects & hackathons page.
-*/
