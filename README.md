@@ -8,5 +8,5 @@ Welcome to the GitHub repository for my personal portfolio website. This website
 - GitHub Pages for hosting
 
 ## Author
-- - Gurleen Kaur (gurleenkseehra@gmail.com).
+- Gurleen Kaur (gurleenkseehra@gmail.com).
 
