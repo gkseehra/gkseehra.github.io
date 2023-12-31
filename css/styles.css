@@ -1,3 +1,14 @@
+/* Hide all sections by default */
+section {
+  display: none;
+}
+
+/* Style for the active navigation link */
+.active {
+  background-color: #700548;
+  font-weight: bold;
+}
+
 /*
 COLOR PALETTE
 https://coolors.co/080705-362023-700548-7272ab-7899d4
@@ -93,84 +104,351 @@ nav a:hover:not(.active) {
   text-align: justify;
 }
 
-div.work-exp-card {
-  display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 2rem;
-  width: 60%;
-  margin: auto;
-  border-radius: 5px;
+/* About me section CSS */
+
+.profile-photo {
+  border-radius: 50%;
+  width: 30%;
 }
 
-.work-exp-card:nth-child(n + 3) {
-  margin-top: 8rem;
+.sub-content p {
+  text-align: justify;
 }
 
-div.about-company {
-  text-align: right;
-  min-width: 15rem;
-  color: rgba(0, 0, 0, 1);
-  font-size: 1.2rem;
-  font-weight: 600;
+.sub-content {
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
-.about-company img {
-  width: 2rem;
-  height: 2rem;
-}
-
-#claro-image {
-  width: 4rem;
-}
-
-.separator {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px rgba(0, 0, 0, 0.2) solid;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.about-job p {
-  font-size: 1.4rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
-
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.project-card {
-  display: flex;
-  align-items: flex-end;
-  width: 25rem;
-  min-height: 25rem;
-  /* background-image: url("../images/resume-website-background.jpg"); */
-  /* TODO- change background color and image */
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.project-title-holder {
-  background-color: rgba(186, 181, 181, 0.7);
-  min-height: 4rem;
-  width: 100%;
-  font-size: 1.4rem;
-  font-weight: 600;
+.img-content {
   text-align: center;
 }
 
-.project-type {
-  font-weight: 100;
+#name {
+  font-size: 3rem;
+  /* font-weight: 300; */
 }
 
+#job,
+#email {
+  font-size: 1.5rem;
+}
+
+#email-icon {
+  width: 2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* Timeline CSS */
+/* Original code by Joshy Francis */
+/* CodePen: https://codepen.io/joshyfrancis/pen/KePdEN */
+/* TIMELINE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline2 {
+  overflow-y: scroll;
+  overflow-x: auto;
+  /* height: 550px; */
+  top: calc(100%-600px);
+  position: relative;
+  scroll-behavior: smooth;
+
+}
+
+.timeline2 *,
+.timeline2 *::before,
+.timeline2 *::after {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  /* color: #fff; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .timeline2::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+} */
+
+/* .timeline2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+} */
+
+/* .timeline2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+} */
+
+.timeline2 ul {
+  /* background: #456990; */
+  /* padding: 50px 0; */
+}
+
+.timeline2 ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  /* width: 6px; */
+  margin: 0 auto;
+  padding-top: 10px;
+  /* 50px; */
+  padding-bottom: 10px;
+  /* padding-bottom: 20px; = center padding-bottom: 10px; = center */
+  background: #650640;
+  /* background: black;  */
+
+  border-left: 3px double #650640;
+
+}
+
+
+.timeline2 ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  /* bottom: 0;  bottom: 50%;=center top: 30px;=top  */
+  transform: translateX(-55%);
+  /* transform: translateX(-50%); */
+  -webkit-transform: translateX(-55%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  border: 2px solid rgba(114, 114, 172, 0.5);
+}
+
+.timeline2 ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: rgba(114, 114, 172, 0.5);
+
+}
+
+.timeline2 ul li div::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  /* bottom: 7px; bottom: 50%;=center top: 20px;=top */
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline2 ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline2 ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 16px 16px 16px 0;
+  /* border-width: 8px 16px 8px 0; */
+  border-color: transparent rgba(114, 114, 172, 0.5) transparent transparent;
+}
+
+.timeline2 ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline2 ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 16px 0 16px 16px;
+  /* border-width: 8px 0 8px 16px; */
+  border-color: transparent transparent transparent rgba(114, 114, 172, 0.5);
+}
+
+
+.timeline2 ul li:nth-child(odd) .time {
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  width: 90px;
+}
+
+.timeline2 ul li:nth-child(even) .time {
+  position: absolute;
+  top: 20px;
+  right: -120px;
+  width: 90px;
+}
+
+
+.timeline2 time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline2 ul li::after {
+  transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
+}
+
+.timeline2 ul li.in-view::after {
+  background: #7272ab;
+  border: 2px solid #650640;
+}
+
+.timeline2 ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+.timeline2 ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+  -webkit-transform: translate(200px, 0, 0);
+}
+
+.timeline2 ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+  -webkit-transform: translate(-200px, 0, 0);
+}
+
+.timeline2 ul li.in-view div {
+  transform: none;
+  -webkit-transform: none;
+  visibility: visible;
+  opacity: 1;
+  /* disabled when arrow is on top position
+      border-radius: 10px;
+      */
+}
+
+.timeline2 ul li .time {
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(270deg);
+}
+
+.timeline2 ul li.in-view .time {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+/* GENERAL MEDIA QUERIES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline2 ul li div {
+    width: 250px;
+  }
+
+  .timeline2 ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline2 ul li {
+    margin-left: 20px;
+  }
+
+  .timeline2 ul li div {
+    width: calc(100vw - 120px);
+  }
+
+  .timeline2 ul li:nth-child(even) div {
+    left: 45px;
+  }
+
+  .timeline2 ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 16px 16px 16px 0;
+    /* border-width: 8px 16px 8px 0;  */
+    border-color: transparent #7272ac transparent transparent;
+  }
+
+
+  .timeline2 ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 60px;
+    left: -23px;
+    width: 90px;
+    /*
+        transform: rotate(-90deg);
+        -webkit-transform:rotate(270deg);
+        */
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  .timeline2 ul li:nth-child(even) .time {
+    position: absolute;
+    top: 60px;
+    right: -67px;
+    width: 90px;
+    /*
+        transform: rotate(-90deg);
+        -webkit-transform:rotate(270deg);
+        */
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  .timeline2 ul li.in-view:nth-child(odd) .time {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(270deg);
+  }
+
+  .timeline2 ul li.in-view:nth-child(even) .time {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(270deg);
+  }
+
+}
+
+.position {
+  font-size: 1.2em;
+  /* Slightly larger font size for position */
+  font-weight: bold;
+  /* Make the job title bold */
+  margin-bottom: 0.5em;
+  color: #333;
+  /* Dark grey for better readability */
+}
+
+.company-name {
+  font-size: 1em;
+  font-weight: 500;
+  /* Medium weight for company name */
+  color: #555;
+  margin-bottom: 0.25em;
+}
+
+.location {
+  font-size: 0.9em;
+  /* Smaller font size for location */
+  color: #777;
+  /* Lighter text color for location */
+  margin-bottom: 1em;
+  /* More space before job responsibilities */
+}
+
+.role {
+  font-size: 0.9em;
+  /* Maintain a smaller font size for the detailed text */
+  color: #444;
+  /* Dark grey but lighter than the title for the description */
+  line-height: 1.5;
+  /* Increased line height for better readability */
+}
+
+/* Skills page CSS */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -187,94 +465,104 @@ div.about-company {
   background-color: none;
 }
 
-.education-card {
-  max-width: 25rem;
-  max-height: 25rem;
-  margin: auto;
-  margin-bottom: 4rem;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: none;
+/* Project page CSS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
-.education-card h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0px 0px 3px 0px;
-}
-
-.education-year {
-  font-size: 1.4rem;
-}
-
-.education-marks {
-  font-size: 1.4rem;
-}
-
-.education-year h4,
-.education-marks h4 {
-  display: inline;
-}
-
-.painting-slides {
-  display: none;
-}
-
-/* ------------------------------- */
-#slideshow {
+.grid-item {
+  background: #f9f9f9;
+  border-radius: 4px;
   overflow: hidden;
-  height: 510px;
-  width: 728px;
-  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: box-shadow 0.3s ease-in-out;
+  display: block;
 }
 
-/* Style each of the sides
-with a fixed width and height */
-.slide {
-  float: left;
+.grid-item:hover .overlay {
+  opacity: 1;
+  /* Show overlay on hover */
+}
+
+.grid-item:hover .project-title {
+  background-color: #6d1149;
+  /* New background color for the title on hover */
+}
+
+.project-title {
+  font-weight: bold;
+  padding: 15px;
   text-align: center;
-  height: 460px;
-  width: 728px;
-  background-color: white;
+  background-color: #7272ac;
+  color: white;
 }
 
-.slide img {
-  max-height: 460px;
-  max-width: 728px;
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* Set a fixed height for the images */
+  background: #ddd;
+  /* Fallback color */
 }
 
-/* Add animation to the slides */
-.slide-wrapper {
-  /* Calculate the total width on the
-  basis of number of slides */
-  width: calc(728px * 4);
-  height: 460px;
-
-  /* Specify the animation with the
-  duration and speed */
-  animation: slide 10s ease infinite;
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Define the animation
-for the slideshow */
-@keyframes slide {
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  /* Semi-transparent black background */
+  color: white;
+  width: 100%;
+  height: 100%;
+  /* Overlay covers the entire image */
+  opacity: 0;
+  /* Hide overlay by default */
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  /* Center text vertically */
+  justify-content: center;
+  /* Center text horizontally */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
 
-  /* Calculate the margin-left for
-  each of the slides */
-  20% {
-    margin-left: 0px;
+.project-description {
+  transform: translateY(-20px);
+  /* Slightly raise the description for animation effect */
+  transition: transform 0.3s ease-in-out;
+  visibility: hidden;
+  /* Hide description by default */
+}
+
+.grid-item:hover .project-description {
+  transform: translateY(0);
+  visibility: visible;
+  /* Show description on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 960px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  40% {
-    margin-left: calc(-728px * 1);
-  }
-
-  60% {
-    margin-left: calc(-728px * 2);
-  }
-
-  80% {
-    margin-left: calc(-728px * 3);
+@media screen and (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }

@@ -2,30 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gurleen Kaur</title>
-  <!-- Add Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
-  <link rel="stylesheet" href="css/index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gurleen Kaur's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <div class="main">
     <nav>
       <div>Gurleen Kaur</div>
-      <a class="selected" href="index.html">About me</a>
-      <a href="workExperience.html">Work experience</a>
-      <a href="projectsAndHackathons.html">Projects & Hackathons</a>
-      <a href="skillsAndAreaOfInterests.html">Skills & Area of interests</a>
 
-      <a href="extraCurricularInterests.html">Art</a>
+      <a href="#about">About Me</a>
+      <a href="#work">Experience & Education</a>
+      <a href="#projects">Projects & Achievements</a>
+      <a href="#skills">Skills & Interests</a>
 
     </nav>
 
-    <section class="content">
+    <!-- <div id="content"> -->
+    <section class="content" id="about">
+      <!-- Your about me content -->
       <div class="img-content">
         <img class="profile-photo" src="images/profile-photo.jpeg">
         <div>
@@ -55,7 +52,257 @@
         </p>
       </div>
     </section>
+
+    <section class="content" id="work">
+      <div class="timeline2">
+        <ul>
+          <li>
+            <div>
+              <p class="position">Android Development Intern</p>
+              <p class="company-name">Claro Energy Pvt. Lmt.</p>
+              <p class="location">New Delhi, India</p>
+              <p class="role">
+
+                In my very first foray into the corporate world,
+                I worked on developing and enhancing Android apps for service booking.
+                Added features like a search function with a recycler view, Google Maps integration, utilizing the
+                Volley library for efficient data retrieval
+                and collaborated closely with the backend team to create cohesive applications.
+              </p>
+            </div>
+            <span class="time">
+              <span>JUL, 2018</span>
+            </span>
+          </li>
+          <li>
+            <div>
+              <p class="position">Completed Undergraduation</p>
+              <p class="company-name">Mody University of Science & Technology</p>
+              <p class="location">Rajasthan, India</p>
+              <p class="role">Bachelor of Technology</p>
+              <p class="role">(Computer Science and Engineering)</p>
+            </div>
+            <span class="time">
+              <span>AUG, 2019</span>
+            </span>
+          </li>
+
+          <li>
+            <div>
+              <p class="position">Associate Software Engineer</p>
+              <p class="company-name">Accenture</p>
+              <p class="location">Bangalore, India</p>
+              <p class="role">
+                In my very first full-time job, my role was to ensure the smooth execution
+                of various scheduled shell scripts. Additionally, I took charge of delivering weekly client
+                presentations, where I highlighted project progress and tackled any issues that arose.
+              </p>
+            </div>
+            <span class="time">
+              <span>JUN, 2019</span>
+            </span>
+          </li>
+
+          <li>
+            <div>
+              <p class="position">Software Engineer</p>
+              <p class="company-name">Soroco</p>
+              <p class="location">Bangalore, India</p>
+              <p class="role">
+                My decision to transition to Soroco (a B2B technology startup specializing in AI-driven business
+                optimization) was driven by the dynamic nature of startup environments, which
+                provide exceptional opportunities for rapid skill development. At Soroco, I've had the chance to wear
+                multiple hats, exposing myself to various facets of business and technology.<br><br>
+
+                Constantly engaging with data analysis and Natural Language Processing (NLP), I engineered data
+                pipelines, transforming raw data into actionable insights through a blend of data
+                analysis, Python programming, and SQLAlchemy. I also designed data models and visualizations for Qlik
+                Sense, focusing on applications like Process Insights, Application Insights, Email Insights, and Rework
+                Analysis, all of which significantly boosted client efficiency and overall productivity.<br><br>
+
+                I took the lead in developing front-end extensions for our data analytics dashboard and used the
+                dagre-d3 library to create visually engaging and informative data visualizations. In addition, I managed
+                the Git repository for all front-end extensions, consolidating them into a single repository for
+                improved organization and accessibility.
+              </p>
+            </div>
+            <span class="time">
+              <span>AUG, 2020</span>
+            </span>
+          </li>
+
+          <li>
+            <div>
+              <p class="position">Software Engineer</p>
+              <p class="company-name">Kreditbee</p>
+              <p class="location">Bangalore, India</p>
+              <p class="role">
+                At Kreditbee (a fintech startup), I was not only immersed in a completely new tech stack but also
+                consistently recognized by my seniors for my swift grasp of software architecture and proficiency in
+                navigating the intricacies of the new tech landscape.<br><br>
+
+                My responsibilities included working extensively with REST APIs (in Go language), AWS lambda functions,
+                SQS, and SNS. I proficiently handled the development, deployment, testing, and integration of various
+                APIs within the AWS ecosystem.
+                This experience allowed me to broaden my skill set significantly and gain a deeper understanding of
+                cloud-based technologies and REST APIs.
+              </p>
+            </div>
+            <span class="time">
+              <span>JUN, 2021</span>
+            </span>
+          </li>
+
+          <li>
+            <div>
+              <p class="position">Senior Software Engineer</p>
+              <p class="company-name">Kreditbee</p>
+              <p class="location">Bangalore, India</p>
+              <p class="role">
+                During my time at Kreditbee, things moved at quite a pace. In just 11 months, I found myself promoted to
+                the role of Senior Software Engineer. Alongside my regular tasks, I was also doing code
+                reviews, attending deployement calls and more.<br><br>
+
+                One of the standout moments for me was when I dug into an existing go script and modified the code using
+                goroutines and SQL query optimizations - this helped cut our processing time in half! I also took the
+                time to put together some comprehensive design documents for our crucial features.<br><br>
+
+                My role covered everything from gathering requirements to development, QA handover, and even production
+                release. I was always on the front lines during deployment calls, making sure our projects saw the light
+                of day smoothly.
+              </p>
+            </div>
+            <span class="time">
+              <span>APR, 2022</span>
+            </span>
+          </li>
+
+          <li>
+            <div>
+              <p class="position">Started Masters' Degree</p>
+              <p class="company-name">Indiana University Bloomington</p>
+              <p class="location">Bloomington, IN, United States</p>
+              <p class="role">Master of Science</p>
+              <p class="role">(Computer Science)</p>
+            </div>
+            <span class="time">
+              <span>AUG, 2019</span>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="content" id="projects">
+      <div class="grid-container">
+        <a href="https://github.com/gkseehra/Flight-Delay-Prediction" target="_blank" class="grid-item">
+
+          <div class="project-image">
+            <img src="images/flight-image.jpeg" alt="A flight image.">
+            <div class="overlay">
+              <p class="project-description">This project aims to predict the likelihood of flight delays using machine
+                learning models.</p>
+            </div>
+          </div>
+          <div class="project-title">Flight Delay Prediction</div>
+        </a>
+
+        <a href="https://github.com/gkseehra/Domain-Agnostic-Sentiment-Analysis" target="_blank" class="grid-item">
+          <div class="project-image">
+            <img src="images/sa.jpeg" alt="An image of 3 different sentiments.">
+            <div class="overlay">
+              <p class="project-description">The project includes data processing, model comparison, hyperparameter
+                tuning, and a user-friendly Flask web app for real-time sentiment prediction.</p>
+            </div>
+          </div>
+          <div class="project-title">Domain Agnostic Sentiment Analysis</div>
+
+        </a>
+
+        <a href="https://github.com/gkseehra/TripAdvisorScraper" target="_blank" class="grid-item">
+          <div class="project-image">
+            <img src="images/ta-scraper.jpeg" alt="Image of a spider web.">
+            <div class="overlay">
+              <p class="project-description">This project is a data collection and analysis initiative focused on
+                extracting valuable restaurant data from TripAdvisor.</p>
+            </div>
+          </div>
+          <div class="project-title">TripAdvisor Scraper</div>
+
+        </a>
+        <a href="https://github.com/gkseehra/IMDB-Movies-Analysis" target="_blank" class="grid-item">
+          <div class="project-image">
+            <img src="images/imdb-ma.jpeg" alt="Image of a clapboard.">
+            <div class="overlay">
+              <p class="project-description">This project contains analysis of the IMDB Movies Dataset, spanning the
+                years from 1888 to 2023. The primary goal is to uncover interesting patterns and insights about movie
+                trends over this extensive period.</p>
+            </div>
+          </div>
+          <div class="project-title">IMDB Movies Analysis</div>
+
+        </a>
+        <a href="https://github.com/gkseehra/k-means" target="_blank" class="grid-item">
+          <div class="project-image">
+            <img src="images/k-means.svg" alt="Image of a graph showing 3 different clusters.">
+            <div class="overlay">
+              <p class="project-description">This project contains three distinct implementations of the K-Means
+                clustering algorithm. Each implementation showcases a different approach to initializing centroids and
+                determining the stopping condition for the algorithm.</p>
+            </div>
+          </div>
+          <div class="project-title">Custom k-means</div>
+
+        </a>
+        <!-- More projects here -->
+      </div>
+
+    </section>
+
+    <section class="content" id="skills">
+      <h1>My top skills</h1>
+      <div class="skills-grid">
+        <!-- <img class="skills-card" src="images/DSA.jpg" /> -->
+        <img class="skills-card" src="images/python.png" />
+        <img class="skills-card" src="images/sql.png" />
+        <img class="skills-card" src="images/machine-learning.jpg" />
+        <img class="skills-card" src="images/git.png" />
+
+      </div>
+      <h1>Technologies I am currently exploring</h1>
+      <div class="skills-grid">
+        <img class="skills-card" src="images/react.png" />
+        <img class="skills-card" src="images/nlp.png" />
+        <img class="skills-card" src="images/generativeAI.png" />
+
+      </div>
+      <h1>Other skills</h1>
+      <div class="skills-grid">
+        <img class="skills-card" src="images/golang.jpeg" />
+        <img class="skills-card" src="images/linux.jpg" />
+        <img class="skills-card" src="images/c.png" />
+        <img class="skills-card" src="images/cpp.png" />
+        <img class="skills-card" src="images/java.png" />
+        <img class="skills-card" src="images/android.png" />
+        <img class="skills-card" src="images/qlik-sense.png" />
+        <img class="skills-card" src="images/aws.png" />
+        <img class="skills-card" src="images/html.png" />
+        <img class="skills-card" src="images/css.png" />
+        <img class="skills-card" src="images/js.png" />
+      </div>
+      <h1>My area of interest</h1>
+      <div class="skills-grid">
+        <img class="skills-card" src="images/machine-learning.jpg" />
+        <img class="skills-card" src="images/nlp.png" />
+        <img class="skills-card" src="images/generativeAI.png" />
+      </div>
+    </section>
+
+    <!-- </div> -->
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
