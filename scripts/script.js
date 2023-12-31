@@ -1,33 +1,17 @@
 $(document).ready(function () {
-  // Show the 'about me' section by default
   $('#about').show();
   $('nav a[href="#about"]').addClass('active');
-
-  // Initialize the timeline function
   initializeTimeline();
-
-  // Click event for navigation links
   $('nav a').click(function (event) {
     event.preventDefault();
-
-    // Remove 'active' class from all nav links
     $('nav a').removeClass('active');
-
-    // Add 'active' class to the clicked link
     $(this).addClass('active');
-
-    // Hide all sections
     $('section').hide();
-
-    // Show the section corresponding to the clicked link
     var section = $($(this).attr('href'));
     section.show();
-    console.log("HELLLOOOO!!!")
-    console.log("section", section)
     console.log((section.is('#work')))
-    // If the 'work' section is selected, call the timeline animation function
     if (section.is('#work')) {
-      callbackFunc(); // Call the timeline animation function
+      callbackFunc();
     }
   });
 });
@@ -37,13 +21,7 @@ $(document).ready(function () {
 var timelines;
 function initializeTimeline() {
   'use strict';
-
-  // The rest of your timeline function code...
   timelines = document.querySelectorAll('.timeline2');
-
-  // ... (the rest of the timeline function remains unchanged)
-
-  // listen for events
   window.addEventListener("load", callbackFunc);
   window.addEventListener("resize", updateLayout);
   window.addEventListener("scroll", callbackFunc);
@@ -75,21 +53,11 @@ function callbackFunc() {
     parent_rect = timeline.getBoundingClientRect();
     items = timeline.querySelectorAll(".timeline2 li");
     for (i = 0; i < items.length; i++) {
-      /*
-      if (isElementInViewport(items[i])) {
-      items[i].classList.add("in-view");				   
-      }
-      */
       li = items[i];
       rect = li.getBoundingClientRect();
-
       if ((rect.bottom <= (parent_rect.top + (rect.height / 2))) || (rect.top >= (parent_rect.bottom - (rect.height / 2)))) {
-        //debugger;
-        //li.style['background']='red';
         li.classList.remove("in-view");
-
       } else {
-        //li.style['background']='white';
         li.classList.add("in-view");
       }
 
@@ -98,5 +66,4 @@ function callbackFunc() {
 }
 
 var updateLayout = debounce(function (e) {
-  // ... (updateLayout code remains unchanged)
 }, 500);
