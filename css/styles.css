@@ -72,6 +72,16 @@ nav a:hover:not(.active) {
 }
 
 @media (max-width: 1078px) {
+
+  .grid-item .overlay {
+    opacity: 1;
+  }
+
+  .project-description {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
   html {
     font-size: 7px;
   }
@@ -149,6 +159,22 @@ section {
 }
 
 @media (min-width: 1078px) {
+
+  .grid-item:hover .overlay {
+    opacity: 1;
+  }
+
+  .project-description {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+  }
+
+  .grid-item:hover .project-description {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
   html {
     font-size: 10px;
   }
@@ -480,10 +506,6 @@ section {
   display: block;
 }
 
-.grid-item:hover .overlay {
-  opacity: 1;
-}
-
 .grid-item:hover .project-title {
   background-color: #6d1149;
 }
@@ -527,16 +549,7 @@ section {
   text-align: center;
 }
 
-.project-description {
-  transform: translateY(-20px);
-  transition: transform 0.3s ease-in-out;
-  visibility: hidden;
-}
 
-.grid-item:hover .project-description {
-  transform: translateY(0);
-  visibility: visible;
-}
 
 @media screen and (max-width: 960px) {
   .grid-container {
