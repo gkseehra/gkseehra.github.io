@@ -12,7 +12,7 @@ https://coolors.co/080705-362023-700548-7272ab-7899d4
 
 html {
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
+
   height: 100%;
 }
 
@@ -29,7 +29,6 @@ body {
 
 nav {
   display: flex;
-  width: 20%;
   height: 100%;
   background-color: #080705;
   opacity: 0.9;
@@ -68,6 +67,50 @@ nav a:hover:not(.active) {
   background-color: #7272ab;
 }
 
+#collapsed-nav-link {
+  display: none;
+}
+
+@media (max-width: 1078px) {
+  html {
+    font-size: 7px;
+  }
+
+  nav {
+    width: 25rem;
+  }
+
+  #collapsed-nav-link {
+    height: 20px;
+    display: block;
+    position: fixed;
+    margin: 2rem;
+  }
+
+  #collapsed-nav-link:hover {
+    cursor: pointer;
+  }
+
+  #navbar-links {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .sub-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .content {
+    background-color: #fff;
+    flex: 1;
+    margin: 0rem;
+    overflow: scroll;
+    padding: 3rem;
+  }
+}
+
 section {
   display: none;
 }
@@ -82,14 +125,6 @@ section {
   flex-direction: row;
   height: 100%;
   overflow: hidden;
-}
-
-.content {
-  background-color: #fff;
-  flex: 1;
-  margin: 4rem 4rem 0rem 4rem;
-  overflow: scroll;
-  padding: 3rem;
 }
 
 .content h1 {
@@ -113,9 +148,31 @@ section {
   text-align: justify;
 }
 
-.sub-content {
-  margin-left: 20rem;
-  margin-right: 20rem;
+@media (min-width: 1078px) {
+  html {
+    font-size: 10px;
+  }
+
+  nav {
+    width: 20%;
+  }
+
+  .sub-content {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  .content {
+    background-color: #fff;
+    flex: 1;
+    margin: 4rem 4rem 0rem 4rem;
+    overflow: scroll;
+    padding: 3rem;
+  }
+
+  #navbar-links {
+    display: flex;
+  }
 }
 
 .img-content {
@@ -306,6 +363,8 @@ section {
   .timeline2 ul li:nth-child(even) div {
     left: -289px;
   }
+
+
 }
 
 @media screen and (max-width: 600px) {

@@ -1,8 +1,17 @@
+const toggleButton = document.getElementById('collapsed-nav-link');
+const navbarLinks = document.getElementById('navbar-links');
+
 $(document).ready(function () {
+
+
   $('#about').show();
   $('nav a[href="#about"]').addClass('active');
   initializeTimeline();
   $('nav a').click(function (event) {
+    const viewportWidth = window.innerWidth;
+    if (navbarLinks.style.display === 'flex' && viewportWidth <= 1078) {
+      navbarLinks.style.display = 'none';
+    }
     event.preventDefault();
     $('nav a').removeClass('active');
     $(this).addClass('active');
@@ -14,6 +23,15 @@ $(document).ready(function () {
       callbackFunc();
     }
   });
+});
+
+window.addEventListener('resize', function () {
+  const viewportWidth = window.innerWidth;
+  if (viewportWidth > 1078) {
+    navbarLinks.style.display = 'flex';
+  } else {
+    navbarLinks.style.display = 'none';
+  }
 });
 
 // Original code by Joshy Francis
@@ -67,3 +85,13 @@ function callbackFunc() {
 
 var updateLayout = debounce(function (e) {
 }, 500);
+
+
+
+toggleButton.addEventListener('click', () => {
+  if (navbarLinks.style.display === 'none' || navbarLinks.style.display === '') {
+    navbarLinks.style.display = 'flex';
+  } else {
+    navbarLinks.style.display = 'none';
+  }
+});
