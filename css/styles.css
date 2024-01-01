@@ -95,6 +95,7 @@ nav a:hover:not(.active) {
     display: block;
     position: fixed;
     margin: 2rem;
+    z-index: 9999;
   }
 
   #collapsed-nav-link:hover {

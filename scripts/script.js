@@ -11,6 +11,7 @@ $(document).ready(function () {
     const viewportWidth = window.innerWidth;
     if (navbarLinks.style.display === 'flex' && viewportWidth <= 1078) {
       navbarLinks.style.display = 'none';
+      toggleButton.style.display = 'block'
     }
     event.preventDefault();
     $('nav a').removeClass('active');
@@ -29,8 +30,11 @@ window.addEventListener('resize', function () {
   const viewportWidth = window.innerWidth;
   if (viewportWidth > 1078) {
     navbarLinks.style.display = 'flex';
+    toggleButton.style.display = 'none'
+
   } else {
     navbarLinks.style.display = 'none';
+    toggleButton.style.display = 'block'
   }
 });
 
@@ -91,7 +95,9 @@ var updateLayout = debounce(function (e) {
 toggleButton.addEventListener('click', () => {
   if (navbarLinks.style.display === 'none' || navbarLinks.style.display === '') {
     navbarLinks.style.display = 'flex';
+    toggleButton.style.display = 'none'
   } else {
     navbarLinks.style.display = 'none';
+    toggleButton.style.display = 'block'
   }
 });
